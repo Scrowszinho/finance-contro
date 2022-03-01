@@ -1,0 +1,48 @@
+@import '../../../styles/variables.scss';
+
+.home-container{
+    padding: 20px;
+.home-card{
+    width: 30%;
+    border-radius: 16px;
+    padding: 20px 26px;
+    overflow: hidden;
+    background-color: $color-header;
+    margin: 10px;
+    height: 80vh;
+}
+.home-card:nth-child(2){
+    width: 100%;
+}
+
+
+.card-content{
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+}
+
+.home-content{
+    display: flex;
+}
+.total-money{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    h4{
+        font-size: 20px;
+        color: $color-green;
+        display: flex;
+        align-items: center;
+        font-family: 'Open Sans';
+    }
+    h5{
+        font-size: 24px;
+        color: $color-green;
+        font-family: 'Open Sans';
+
+    }
+}
+
+}
