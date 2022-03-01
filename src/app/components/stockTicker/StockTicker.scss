@@ -1,0 +1,33 @@
+@import '/src/styles/variables.scss';
+
+.stock-ticker{
+    display: block;
+    height: 100%;
+    background-color: black;
+    padding: 10px;
+    .stock-item{
+        display: flex;
+        flex-direction: row-reverse;
+        white-space: nowrap;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: foNyKS;
+        animation-duration: 110s;
+        transition: all 0.25s ease 0s;
+        
+        li{
+            padding: 0px 24px;
+            color: white;
+            font: 600 12px 'Barlow';
+            border-left: 1px solid rgb(68,68,68);
+            border-right: 1px solid rgb(68,68,68);
+            text-transform: uppercase;
+        }
+    }
+}
+
+@keyframes foNyKS{
+    100%{
+        transform: translateX(-100%);
+    }
+}
