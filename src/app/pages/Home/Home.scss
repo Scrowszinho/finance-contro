@@ -13,6 +13,12 @@
 }
 .home-card:nth-child(2){
     width: 100%;
+    overflow-y: auto;
+    
+.card-header{
+    flex-direction: row;
+    justify-content: space-between;
+}
 }
 
 
@@ -21,19 +27,19 @@
     display: grid;
     justify-content: center;
     grid-template-columns: 50% 50%;
-    color: #dadada;
+    color: $color-white;
 }
 
 .performance-area{
     margin-top: 30px;
     font-size: 18px;
-    color: $color-green
+    color: $color-green;
 }
 
 .home-content{
     display: flex;
 }
-.total-money{
+.card-header{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;

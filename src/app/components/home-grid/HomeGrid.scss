@@ -1,0 +1,29 @@
+@import '/src/styles/variables.scss';
+
+.home-grid{
+    border-collapse: collapse;
+    width: 100%;
+    thead{
+        color: $color-grey;
+        background-color: grey;
+    }
+    tbody{
+        margin-top: 10px;
+        color: $color-white;
+        tr{
+            border-bottom: 1px solid $color-grey;
+        }
+    }
+    .grid-actions{
+        color: $color-white;
+        font-size: 18px;
+    }
+
+    
+    th,td{
+        padding: 8px;
+        text-align: center;
+        color: $color-white;
+        text-overflow: ellipsis;
+    }
+}

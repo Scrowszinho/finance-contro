@@ -1,5 +1,5 @@
 import React from "react";
-import './HomeChart.scss';
+import './HomeCharts.scss';
 import { Chart } from 'react-chartjs-2';
 import 'chart.js/auto';
 
