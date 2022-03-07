@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import './Home.scss';
-import { GiTwoCoins, FaChartLine, BsPlusLg, FaWallet } from 'react-icons/all';
+import { GiTwoCoins, FaChartLine, FaPen, BsPlusLg, FaWallet, BsXLg } from 'react-icons/all';
 import { CircularChart, BarChart } from "../../components/home-chart/HomeCharts";
 import HomeGrid from "../../components/home-grid/HomeGrid";
+import Modal from 'react-modal';
+import HomeForm from "../../components/home-form/HomeForm";
 
 export default function Home() {
     const [data, setData] = useState([
@@ -18,7 +20,12 @@ export default function Home() {
             date: new Date().getDate(),
             desc: 'Teste',
         }
-    ])
+    ]);
+    const [openModal, setOpenModal] = useState(false);
+    function closeModal() {
+        setOpenModal(false);
+    }
+
     return (
         <div className="home-container">
             <div className="home-content">
@@ -58,10 +65,27 @@ export default function Home() {
                             Patrimônio
                         </h4>
                         <h4>
-                            <BsPlusLg />
+                            <BsPlusLg onClick={() => setOpenModal(!openModal)} />
                         </h4>
+
                     </span>
-                        <HomeGrid data={data} />
+                    <HomeGrid data={data} />
+                    <Modal
+                        isOpen={openModal}
+                        onAfterClose={() => setOpenModal(false)}
+                        ariaHideApp={false}
+                        onRequestClose={closeModal}
+                        className='modal'
+                        >
+                        <div className="modal-row">
+                            <h4>
+                                <FaPen className="mr-1" />
+                                Editar
+                            </h4>
+                            <BsXLg onClick={closeModal} />
+                        </div>
+                        <HomeForm />
+                    </Modal>
                 </article>
             </div>
         </div>

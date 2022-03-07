@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./StockTicker.scss";
 import axios from 'axios';
-import setVariationColor from "../../utils/SetVariationColor";
+import setVariationColor from "../../utils/set-variation-color";
 
 export default function StockTicker() {
     const [data, setData]: any = useState();
