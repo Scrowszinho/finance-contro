@@ -1,0 +1,31 @@
+@import '/src/styles/variables.scss';
+
+.lateral-navbar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    background-color: $color-header;
+    align-items: space-around;
+    width: 70px;
+    align-items: center;
+    padding: 8px 0px;
+   .menu-item{
+        font-size: 24px;
+        color: white;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .menu-item-title{
+            font-size: 12px;
+            display: none;
+        }
+    }
+    .active{
+        color: $color-green;
+        .menu-item-title{
+            display: unset;
+        }
+    }
+}

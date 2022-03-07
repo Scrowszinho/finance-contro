@@ -1,7 +1,7 @@
 import React from "react";
 import './Home.scss';
-import { GiTwoCoins } from 'react-icons/all';
-import HomeChart from "../../components/home-chart/HomeChart";
+import { GiTwoCoins, FaChartLine } from 'react-icons/all';
+import {CircularChart, BarChart} from "../../components/home-chart/HomeChart";
 
 export default function Home() {
     return (
@@ -15,16 +15,30 @@ export default function Home() {
                         </h4>
                         <h5>R$ 1.800,00</h5>
                     </span>
-                    <HomeChart />
+                    <CircularChart />
                     <div className="card-content">
-                        <span>teste</span>
-                        <span>teste</span>
+                        <span className="mark-sign">Custo</span>
+                        <span>
+                            <span className="small-sign">R$</span>
+                            <span>1.840,90</span>
+
+                        </span>
+                        <span className="mark-sign">Retorno</span>
+                        <span>
+                            <span className="small-sign">R$</span>
+                            <span>30,00 (+10%)</span>
+                        </span>
+                    </div>
+                    <div className="performance-area">
+                        <span>
+                            <FaChartLine /> Meu Desempenho
+                        </span>
+                        <BarChart />
                     </div>
                 </article>
                 <article className="home-card">
                     <div className="card-content">
-                        <span>teste</span>
-                        <span>teste</span>
+
                     </div>
                 </article>
             </div>

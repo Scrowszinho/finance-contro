@@ -1,7 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .home-container{
-    padding: 20px;
+    margin: 20px 15px 0px 100px;
 .home-card{
     width: 30%;
     border-radius: 16px;
@@ -21,6 +21,13 @@
     display: grid;
     justify-content: center;
     grid-template-columns: 50% 50%;
+    color: #dadada;
+}
+
+.performance-area{
+    margin-top: 30px;
+    font-size: 18px;
+    color: $color-green
 }
 
 .home-content{
@@ -45,4 +52,16 @@
     }
 }
 
+}
+
+@media only screen and (max-width: 600px) {
+    .home-container{
+        margin: 10px 40px 10px 10px;
+    }
+    .home-content{
+        flex-direction: column;
+        .home-card{
+            width: 100%;
+        }
+    }
 }
