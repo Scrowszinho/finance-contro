@@ -1,8 +1,58 @@
+@import '/src/styles/variables.scss';
+
 .form-container{
     padding: 20px;
     display: flex;
     flex-direction: column;
     input{
-        border-bottom: 1px solid black;
+        color: $color-white;
+        font-size: 18px;
+        padding: 5px;
+    }
+    .styled-input{
+        display: flex;
+        flex: 1;
+        font-size: 25px;
+        color: $color-white;
+        border-bottom: 1px solid $color-white;
+        svg{
+            margin-top: 5px;
+        }
+        input{
+            width: 100%;
+        }
+    }
+    input:focus, input.form-control:focus {
+        outline:none !important;
+        outline-width: 0 !important;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    .form-date-type{
+        margin-top: 50px;
+        input{
+            background-color: $color-header;
+            padding: 15px;
+            border-radius: 5px;
+            height: 56px;
+            width: 200px;
+        }
+        input::-webkit-calendar-picker-indicator { 
+            background-color: $color-white; 
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        select{
+            background-color: $color-header;
+            color: $color-white;
+            padding: 15px;
+            border-radius: 5px;
+            -webkit-appearance:none;
+            outline: none;        
+            height: 56px;
+            width: 200px;
+        }
     }
 }

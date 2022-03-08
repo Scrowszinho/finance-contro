@@ -1,18 +1,32 @@
 import React from 'react';
 import './HomeForm.scss';
+import { MdOutlineAttachMoney, AiFillFile } from 'react-icons/all';
 
 export default function HomeForm() {
     return (
         <div className='form-container'>
-            <input type="text" name="" id="" />
-            <input type="number" name="" id="" />
-            <div>
-                <input type="date" name="" id="" />
-                <select id="cars" name="cars">
-                    <option value="volvo">Volvo XC90</option>
-                    <option value="saab">Saab 95</option>
-                    <option value="mercedes">Mercedes SLK</option>
-                    <option value="audi">Audi TT</option>
+            <div className='d-flex'>
+                <div className='styled-input mr-3'>
+                <AiFillFile />
+                <input type="text" name="" id="" placeholder='Descrição' />
+                </div>
+                <div className='styled-input'>
+                    <MdOutlineAttachMoney />
+                   
+                    <input type="number" name="" id="" placeholder='Valor' />
+                </div>
+            </div>
+            <div className='form-date-type'>
+                <input type="date" name="" id="" className='mr-2' />
+                <select id="type" name="type"  className='mr-2'>
+                    <option value="CREDIT">Crédito</option>
+                    <option value="DEBIT">Débito</option>
+                    <option value="INVESTIMENTS">Investimentos</option>
+                </select>
+                <select id="type" name="type">
+                    <option value="CREDIT">Crédito</option>
+                    <option value="DEBIT">Débito</option>
+                    <option value="INVESTIMENTS">Investimentos</option>
                 </select>
             </div>
         </div>
