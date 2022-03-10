@@ -56,3 +56,10 @@ body {
   background-color: $color-body;
   border: none;
 }
+
+.rounded-button{
+    padding: 10px 30px;
+    background-color: $color-card-bg;
+    color: white;
+    border-radius: 25px;
+}

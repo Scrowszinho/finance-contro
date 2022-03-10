@@ -7,7 +7,7 @@ export default function HomeGrid({ data }: any) {
         <table className='home-grid'>
             <thead>
                 <tr>
-                    <th>Ações</th>
+                    <th></th>
                     <th>Tipo</th>
                     <th>Data</th>
                     <th>Valor</th>
